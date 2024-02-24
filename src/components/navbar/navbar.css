@@ -1,0 +1,25 @@
+.navbar {
+  height: 4rem;
+  background: var(--elements-bg);
+  display: flex;
+  align-items: center;
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07))
+    drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+}
+
+.btn-theme {
+  background: var(--elements-bg);
+  color: var(--text);
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.btn-theme__icon {
+  transform: rotate(330deg);
+}
+
+

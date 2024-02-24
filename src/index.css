@@ -41,3 +41,31 @@ h1 {
   font-size: 1.125rem;
   font-weight: 800;
 }
+
+.container {
+  width: 100%;
+  margin: auto 4rem;
+}
+
+.semi-bold{
+  font-weight: 600;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+@media screen and (min-width: 1568px) {
+  .container {
+    margin: auto;
+    max-width: 1440px;
+  }
+}

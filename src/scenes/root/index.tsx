@@ -1,10 +1,10 @@
 import { Outlet } from 'react-router-dom';
+import Navbar from '@/components/navbar';
 
-type Props = {};
-
-const Root = (props: Props) => {
+const Root = () => {
   return (
     <div>
+      <Navbar />
       <Outlet />
     </div>
   );

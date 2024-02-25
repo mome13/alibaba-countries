@@ -43,11 +43,11 @@ h1 {
 }
 
 .container {
-  width: 100%;
-  margin: auto 4rem;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
-.semi-bold{
+.semi-bold {
   font-weight: 600;
 }
 
@@ -63,9 +63,27 @@ h1 {
   align-items: center;
 }
 
-@media screen and (min-width: 1568px) {
+.hidden {
+  display: none;
+}
+
+@media screen and (min-width: 375px) and (max-width: 1440px) {
   .container {
-    margin: auto;
-    max-width: 1440px;
+    margin: 0 auto;
+    width: calc(100% - 8rem);
+  }
+}
+
+@media screen and (max-width: 455px) {
+  .container {
+    margin: 0 auto;
+    width: calc(100% - 4rem);
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    margin: 0 auto;
+    width: calc(100% - 2rem);
   }
 }

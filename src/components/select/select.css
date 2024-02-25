@@ -1,0 +1,25 @@
+.select {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  width: max-content;
+  border-radius: 4px;
+  background: var(--elements-bg);
+}
+
+.select__item {
+  padding: 0.75rem 1rem;
+  background: var(--elements-bg);
+  color: var(--text);
+  border: none;
+  text-align: start;
+  cursor: pointer;
+}
+
+.select__item:hover {
+  filter: brightness(110%);
+}
+
+.select__item--selected {
+  filter: brightness(110%);
+}

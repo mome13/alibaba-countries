@@ -1,10 +1,18 @@
-import React from 'react';
+import Dropdown from '@/components/dropdown';
+import FilterByRegion from './features/filter-by-region';
 
-type Props = {};
 
-const home = (props: Props) => {
-
-  return <div>home</div>;
+const Home = () => {
+  return (
+    <div>
+      Home
+      <Dropdown title='Filter by Region'>
+        <FilterByRegion />
+      </Dropdown>
+    </div>
+  );
 };
 
-export default home;
+
+
+export default Home;

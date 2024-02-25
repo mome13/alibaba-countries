@@ -1,5 +1,5 @@
 import './navbar.css';
-import { useTheme } from '@/hooks/useTheme';
+import { useTheme } from '@/hooks/use-theme';
 
 const Navbar = () => {
   const [theme, toggleTheme] = useTheme();

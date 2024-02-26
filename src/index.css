@@ -20,6 +20,8 @@ html {
   --text: hsl(200, 15%, 8%);
   --input: hsl(0, 0%, 52%);
   --bg: hsl(0, 0%, 98%);
+  --border-radius: 4px;
+  --selected-item-brightness: 97%;
   color: var(--text);
   background-color: var(--bg);
 }
@@ -29,6 +31,7 @@ html:not(.style-scope)[dark] {
   --input: hsl(0, 0%, 100%);
   --bg: hsl(207, 26%, 17%);
   --elements-bg: hsl(209, 23%, 22%);
+  --selected-item-brightness: 110%;
 }
 
 body {

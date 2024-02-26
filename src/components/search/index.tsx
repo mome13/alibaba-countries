@@ -1,19 +1,16 @@
 import { useSearchParams } from 'react-router-dom';
 import './search.css';
-import { assertIsFormFieldElement } from '@/lib/utils';
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 const Search = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const formRef = useRef<HTMLFormElement>(null);
 
+  const [search, setSearch] = useState(searchParams.get('search') ?? undefined);
+
   const onSearch = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    const search = event.currentTarget[0];
-    assertIsFormFieldElement(search);
-    search?.value
-      ? searchParams.set('search', search?.value)
-      : searchParams.delete('search');
+    search ? searchParams.set('search', search) : searchParams.delete('search');
     setSearchParams(searchParams);
   };
 
@@ -26,6 +23,10 @@ const Search = () => {
           placeholder={'Search for a country...'}
           type='text'
           name='search'
+          onChange={(event: React.ChangeEvent<HTMLInputElement>) =>
+            setSearch(event.currentTarget.value)
+          }
+          defaultValue={search}
         />
       </form>
     </div>

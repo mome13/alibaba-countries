@@ -1,0 +1,12 @@
+.home-filters {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  gap: 2rem;
+}
+
+@media screen and (max-width: 625px) {
+  .home-filters {
+    flex-direction: column;
+  }
+}

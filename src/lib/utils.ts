@@ -6,3 +6,13 @@ export function assertIsFormFieldElement(
     throw new Error(`Element is not a form field element`);
   }
 }
+
+export const queryStringToObject = (input: string) =>
+  JSON.parse(
+    '{"' +
+      decodeURI(input)
+        .replace(/"/g, '\\"')
+        .replace(/&/g, '","')
+        .replace(/=/g, '":"') +
+      '"}'
+  );

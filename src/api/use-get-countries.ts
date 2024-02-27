@@ -1,4 +1,4 @@
-import axios, { AxiosResponse } from 'axios';
+import axios from 'axios';
 import { useQuery } from 'react-query';
 import { ICountry } from '@/types';
 import { fieldsFilter, BASE_URL } from './index';
@@ -42,11 +42,8 @@ const fetchCountry = ({ queryKey }) => {
           });
         });
 
-        console.log('ss', shared, response);
         return shared;
       });
-
-      console.log(data);
 
       return data || [];
     }
@@ -55,18 +52,13 @@ const fetchCountry = ({ queryKey }) => {
   return fetchCountries(`${BASE_URL}${queryUrl}`);
 };
 
-export const useGetCountries = (
-  queryParams: string | null,
-  onError?: (data: AxiosResponse<any, any>) => void,
-  select?: (data: AxiosResponse<any, any>) => any
-) => {
+export const useGetCountries = (queryParams: string | null) => {
   return useQuery<any, any, Array<ICountry>, any>(
     ['search', queryParams],
     fetchCountry,
     {
-      onError,
-      select,
       retry: false,
+      refetchInterval: false,
     }
   );
 };

@@ -1,0 +1,21 @@
+.home-filters {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem auto;
+  gap: 2rem;
+}
+
+.home-contents {
+  display: grid;
+  width: 100%;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 2rem;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 625px) {
+  .home-filters {
+    flex-direction: column;
+  }
+}

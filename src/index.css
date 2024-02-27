@@ -1,0 +1,101 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-family: 'Nunito Sans', Inter, system-ui, Avenir, Helvetica, Arial,
+    sans-serif;
+
+  color-scheme: light dark;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  --elements-bg: hsl(0, 0%, 100%);
+  --text: hsl(200, 15%, 8%);
+  --input: hsl(0, 0%, 52%);
+  --bg: hsl(0, 0%, 98%);
+  --border-radius: 4px;
+  --selected-item-brightness: 97%;
+  color: var(--text);
+  background-color: var(--bg);
+}
+
+html:not(.style-scope)[dark] {
+  --text: hsl(0, 0%, 100%);
+  --input: hsl(0, 0%, 100%);
+  --bg: hsl(207, 26%, 17%);
+  --elements-bg: hsl(209, 23%, 22%);
+  --selected-item-brightness: 110%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 1.125rem;
+  font-weight: 800;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.flex {
+  display: flex;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Change Autocomplete styles in Chrome*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--text);
+  color: var(--text);
+  -webkit-box-shadow: 0 0 0px 1000px var(--elements-bg) inset;
+}
+
+@media screen and (min-width: 375px) and (max-width: 1440px) {
+  .container {
+    margin: 0 auto;
+    width: calc(100% - 8rem);
+  }
+}
+
+@media screen and (max-width: 455px) {
+  .container {
+    margin: 0 auto;
+    width: calc(100% - 4rem);
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .container {
+    margin: 0 auto;
+    width: calc(100% - 2rem);
+  }
+}

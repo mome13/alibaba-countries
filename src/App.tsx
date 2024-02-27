@@ -5,6 +5,9 @@ import Root from '@/scenes/root';
 import Details from '@/scenes/details';
 import Error from '@/scenes/error';
 
+import { QueryClientProvider, QueryClient } from 'react-query';
+
+const queryClient = new QueryClient();
 function App() {
   const router = createBrowserRouter([
     {
@@ -24,7 +27,11 @@ function App() {
     },
   ]);
 
-  return <RouterProvider router={router} />;
+  return (
+    <QueryClientProvider client={queryClient}>
+      <RouterProvider router={router} />
+    </QueryClientProvider>
+  );
 }
 
 export default App;

@@ -5,7 +5,7 @@ const Navbar = () => {
   const [theme, toggleTheme] = useTheme();
 
   return (
-    <div className='navbar'>
+    <header className='navbar'>
       <div className='container flex justify-between items-center'>
         <h1>{'Where in the world?'}</h1>
         <button onClick={() => toggleTheme()} className='btn-theme'>
@@ -17,7 +17,7 @@ const Navbar = () => {
           <span className='semi-bold'>{`Dark Mode`}</span>
         </button>
       </div>
-    </div>
+    </header>
   );
 };
 
